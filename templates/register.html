@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .register-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 20%;
+        }
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .register-button {
+            width: 88%;
+            margin: 10px 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .register-button:hover {
+            background-color: #45a049;
+        }
+
+        .flash{
+            font-Size: 12px;
+        }
+        
+        .alert-error{
+            color: red;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="register-container">
+        <h2>Register</h2>
+
+        {% if request.method == 'POST' %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flashes">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        {% endif %}
+
+        
+        <form action="/register" method="POST">
+            <!--<input type="text" name="username" class="input-field" placeholder="Username" required><br> -->
+            <input type="email" name="email" class="input-field" placeholder="Email" required><br>
+            <input type="password" name="password" class="input-field" placeholder="Password" required><br>
+            <input type="password" name="confirm_password" class="input-field" placeholder="Confirm Password" required><br>
+            <button type="submit" class="register-button">Register</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 20%;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 86%;
+            padding: 10px;
+            margin: 10px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-button {
+            width: 94%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin: 10px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #45a049;
+        }
+
+        .alert-error{
+            margin-left: 10px;
+            padding-bottom : 5px;
+            color: red;
+
+        }
+
+   
+
+        .alert-success{
+            margin-left: 10px;
+            padding-bottom : 5px;
+            color: green;
+
+        }
+    
+        a{
+            font-size: 13px;
+            text-align: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        
+    {% if request.method == 'POST' %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flashes">
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    {% endif %}
+
+
+        <form action="/login" method="POST">
+            <input type="text" name="email" class="input-field" placeholder="Email" required><br>
+            <input type="password" name="password" class="input-field" placeholder="Password" required><br>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <a href="/register"> Don't have an account? Sign Up </a>
+    </div>
+</body>
+</html>
