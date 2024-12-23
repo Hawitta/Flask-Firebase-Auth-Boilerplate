@@ -4,22 +4,23 @@
 
 ### 1. Create a new project on the Firebase Console.  
 Firebase Console ->  Web -> Add application details
+<br />
 
 ### 2. Copy the Firebase config dictionary.
 
 - Go to **Project settings** -> **General** -> Scroll to **Web Apps** -> **SDK Setup and Configuration** -> Select **Config** -> Copy **firebaseConfig** dictionary 
-
+<br />
 
 ### 3. Configure Firebase Authentication
 - Go to **Authentication** → **Sign-in method** -> **Add new provider** -> **Email/Password** 
 - This enables **Email/Password** sign-in method.
-
+<br />
 ### 3. Get Repository and Pull it Locally
 - Clone the repository to your local machine using the following command:
   
   ```bash
     git clone https://github.com/Hawitta/Flask-Firebase-Auth-Boilerplate.git
-
+<br />
 ### 4. Navigate to project
 
 ```bash
