@@ -58,10 +58,12 @@ Install flask firebase library by running the following command
 
 ### 7. Add secret key to main.py
 A dummy secret key has been provided under the flask app initialization, change this accordingly
+
 <br />
 
 ### 8. Run the project
 Right click on the main.py code and select Run Code
+
 <br />
 
 ### 9. Display on browser
@@ -69,5 +71,6 @@ A link will be provided under the text, WARNING: This is a development server.
 
 The project is currently being run on a localhost, hence the format will be http://127.0.0.1:<port>
 
-<br />
 Press the link and CTRL and it will redirect you to open the link on default browser.
+
+<br />
