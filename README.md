@@ -1,5 +1,5 @@
 # Flask-Firebase-Auth-Boilerplate
-
+ 
 ## Setup Instructions
 
 ### 1. Create a new project on the Firebase Console.
