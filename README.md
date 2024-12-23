@@ -29,6 +29,7 @@ Firebase Console ->  Web -> Add application details
 
 ### 4. Navigate to project
 
+
 ```bash
   cd Flask-Firebase-Auth-Boilerplate 
 ```
