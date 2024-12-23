@@ -30,11 +30,11 @@ Firebase Console ->  Web -> Add application details
   cd Flask-Firebase-Auth-Boilerplate 
 ```
 <br />
+
 ### 5. Paste config dictionary to config.py
 Change the code from Javascript object notation to Python dictionary notation as shown
 
 ```bash
-
 config = {
   'apiKey': " ",
   'authDomain': " ",
@@ -47,6 +47,7 @@ config = {
 
 ```
 <br />
+
 ### 6. Install dependencies
 Install flask firebase library by running the following command
 
