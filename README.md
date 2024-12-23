@@ -1,4 +1,4 @@
-# Flask-Firebase-Auth-Boilerplates
+# Flask-Firebase-Auth-Boilerplate
 
 ## Setup Instructions
 
