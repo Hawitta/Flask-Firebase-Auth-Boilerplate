@@ -2,7 +2,7 @@
  
 ## Setup Instructions
 
-### 1. Create a new project on the Firebase Console.
+### 1. Create a new project on the Firebase Console. 
 Firebase Console ->  Web -> Add application details
 
 ### 2. Copy the Firebase config dictionary.
